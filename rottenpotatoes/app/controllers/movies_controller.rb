@@ -23,7 +23,7 @@ class MoviesController < ApplicationController
       @movies = movie.find_same_director_movies
     else
       redirect_to movies_path
-      flash[:warning] = "'#{movie.title}' there is no director"
+      flash[:warning] = "'#{movie.title}' has no director info"
     end
   end
 
@@ -58,7 +58,7 @@ class MoviesController < ApplicationController
       @movies = movie.find_same_rating_movies
     else
       redirect_to movies_path
-      flash[:warning] = "'#{movie.title}' there is no rating"
+      flash[:warning] = "'#{movie.title}' has no rating"
     end
   end
 
